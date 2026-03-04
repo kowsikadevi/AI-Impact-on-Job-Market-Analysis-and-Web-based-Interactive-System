@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+    font-family: "Times New Roman", serif;
+    background: url("bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    overflow: hidden;
+}
+
+/* PAGE TRANSITION */
+body {
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* DARK OVERLAY */
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HEADINGS */
+.heading {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* INDEX TITLE AT TOP */
+.top-title {
+    position: absolute;
+    top: 40px;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+/* INPUT BOXES (BIGGER) */
+.box {
+    width: 420px;
+    padding: 16px;
+    font-size: 22px;
+    margin: 14px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right, #00E5FF, white, #00E5FF);
+    color: black;
+    font-family: "Times New Roman", serif;
+}
+
+/* BUTTON STATES */
+.btn-disabled {
+    background: grey;
+    color: white;
+    cursor: not-allowed;
+}
+
+.btn-enabled {
+    background: lightgreen;
+    color: black;
+    cursor: pointer;
+}
+
+/* GENERAL BUTTON */
+button {
+    border: none;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-family: "Times New Roman", serif;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+/* JOB CARDS */
+#jobCards {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    width: 240px;
+    height: 140px;
+    border-radius: 18px;
+    background: linear-gradient(to right, #00E5FF, white, #00E5FF);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 10px;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* COMPARISON BUTTON (HALF WHITE) */
+.compare-btn {
+    background: rgba(249, 248, 248, 0.96);
+    color: black;
+
+    position: fixed;      /* KEY CHANGE */
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 1000;        /* prevents overlap issues */
+}
+.compare-btn:hover {
+    transform: translateX(-50%);
+}
+
+/* BACK BUTTON IMAGE */
+.back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+}
+
+.back-btn img {
+    width: 26px;
+}
+
+/* DETAILS GRID 4×2 */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 60px;
+    margin-top: 20px;
+}
+
+/* NEW → ensures metrics stack vertically */
+.metric {
+    grid-column: span 2;     /* FULL WIDTH */
+    margin-bottom: 18px;
+}
+
+.metric-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.metric-value {
+    font-size: 20px;
+    margin-top: 4px;
+}
+
+/* JOB TITLE */
+.job-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    grid-column: span 2;     /* FULL WIDTH */
+    text-align: center;
+}
+
+/* BARS */
+.bar-container {
+    width: 420px;
+    height: 36px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 6px;
+}
+
+/* AI Impact Level */
+.impact-level-block {
+    grid-column: span 2;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.level-low,
+.level-medium,
+.level-high {
+    padding: 10px 22px;
+    border-radius: 18px;
+    min-width: 200px;
+    display: inline-block;
+    text-align: center;
+    font-family: "Times New Roman", serif;
+}
+
+/* 2×2 grid */
+.info-grid {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 80px;   /* slightly wider spacing */
+    margin-top: 20px;
+}
+
+/* Each info item */
+.info-item {
+    text-align: center;
+}
+
+/* VALUE BOX */
+.info-value {
+    margin-top: 8px;
+    background: white;
+    color: black;
+    padding: 10px 18px;
+    border-radius: 16px;
+    font-family: "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: normal;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    display: inline-block;
+    min-width: 200px;      /* NEW → keeps symmetry */
+}
+
+/* BAR */
+.bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #66FFFF, #00AEEF);
+}
+
+/* IMPACT LEVEL COLORS */
+.level-low {
+    background: lightgreen;
+    color: black;
+    padding: 6px 14px;
+    border-radius: 12px;
+}
+
+.level-medium {
+    background: rgb(188, 188, 123);
+    color: black;
+    padding: 6px 14px;
+    border-radius: 12px;
+}
+
+.level-high {
+    background: #ff9999;
+    color: black;
+    padding: 6px 14px;
+    border-radius: 12px;
+}
+
+/* COMPARISON PAGE */
+#charts {
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.chart-card {
+    background: black;
+    border-radius: 22px;
+    padding: 15px;
+}
+
+.chart-title {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* TOKEN LEGEND */
+.legend {
+    position: absolute;
+    bottom: 60px;
+    right: 100px;
+    font-size: 22px;
+}
